@@ -1,3 +1,4 @@
+# Build Stage
 FROM php:7.4-cli
 
 # Setting workdir to default
