@@ -10,8 +10,8 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
-// const create_table = `CREATE TABLE people(id int NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY (id));`
-// connection.query(create_table)
+const create_table = `CREATE TABLE IF NOT EXISTS people(id int NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY (id));`
+connection.query(create_table)
 
 const insert_user = `INSERT INTO people(name) values('Pery')`
 connection.query(insert_user)
